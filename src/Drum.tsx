@@ -9,6 +9,8 @@ const Drum = ({audioClip}: DrumProps) => {
         (document.getElementById(clip.keyTrigger) as HTMLAudioElement)
         .play()
         .catch(console.error)
+
+        document.getElementById("display")!.innerText = clip.description;
     }
     return ( 
         <button
